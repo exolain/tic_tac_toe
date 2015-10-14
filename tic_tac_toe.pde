@@ -128,9 +128,12 @@ void mousePressed() {
       for (int i = 0; i<cols; i++) {
         for (int j = 0; j<rows; j++) {
           if(board[i][j].checkPlayer() == 0)
-               board[i][j].click(mouseX, mouseY);
-               board[i][j].setState(0);
-               player=1;
+               {
+                 board[i][j].click(mouseX, mouseY);
+               }
+             //  board[i][j].setState(0);
+             //  player=2;
+             
                
         }
       }
@@ -194,9 +197,9 @@ void mousePressed() {
       int score = 0;
  
       // First cell
-      if (board[row1][col1].checkState() == 2) {
+      if (board[row1][col1].checkPlayer() == 1) {
          score = 1;
-      } else if (board[row1][col1].checkPlayer() == 1) {
+      } else if (board[row1][col1].checkPlayer() == 0) {
          score = -1;
       }
  
