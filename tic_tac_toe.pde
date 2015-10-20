@@ -1,3 +1,5 @@
+//Integrante: Natalia Marin Perez.
+
 Cell[][] board;
 int cols = 3;
 int rows = 3;
